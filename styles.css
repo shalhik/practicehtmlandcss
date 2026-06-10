@@ -21,18 +21,16 @@ body {
   color: var(--text-white);
   overflow-x: hidden;
 
-  /* ОДИН ОБЩИЙ ФОН НА ВЕСЬ САЙТ */
+
   background-color: #000000;
-  background-image: url('design/backgrad.jpg'); /* ← имя твоей большой картинки */
-  background-size: 1920px auto; /* фиксированная ширина, высота подстроится */
-  background-position: center top; /* всегда начинается сверху */
+  background-image: url('design/backgrad.jpg');
+  background-size: 1920px auto; 
+  background-position: center top;
   background-repeat: no-repeat;
 
 }
 
-/* ═══════════════════════════════════════════
-   ФОНОВЫЙ SVG — ГЛОБАЛЬНЫЕ ПРАВИЛА
-   ═══════════════════════════════════════════ */
+
 .bg-svg {
   position: absolute;
   inset: 0;
@@ -43,9 +41,6 @@ body {
   pointer-events: none;
 }
 
-/* ══════════════════════════════════════════
-   NAVBAR
-   ═══════════════════════════════════════════ */
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -93,9 +88,6 @@ nav {
   opacity: 0.6;
 }
 
-/* ═══════════════════════════════════════════
-   HERO
-   ═══════════════════════════════════════════ */
 #hero {
   min-height: 100vh;
   display: flex;
@@ -108,14 +100,14 @@ nav {
 }
 #hero::before {
   content: '';
-  position: fixed; /* ← ВОТ ЭТО: фон зафиксирован относительно экрана */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
-  z-index: -1; /* ← фон позади контента */
+  z-index: -1;
   pointer-events: none;
 }
 
@@ -165,10 +157,6 @@ nav {
   flex-wrap: wrap;
   animation: fadeUp 0.8s 0.3s ease both;
 }
-
-/* ═══════════════════════════════════════════
-   BUTTONS
-   ═══════════════════════════════════════════ */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -206,10 +194,6 @@ nav {
 }
 
 .btn-arrow { font-size: 16px; }
-
-/* ═══════════════════════════════════════════
-   SECTIONS COMMON
-   ═══════════════════════════════════════════ */
 section {
   min-height: 100vh;
   margin: 0;
@@ -233,11 +217,6 @@ section:not(#hero) { scroll-margin-top: 110px; }
 
 .section-center { text-align: center; margin-top: 56px; }
 
-/* ─ ABOUT ── */
-
-
-/* ── ABOUT ── */
-/* ── ABOUT ── */
 #about {
   min-height: 100vh;
   margin: 0;
@@ -247,22 +226,20 @@ section:not(#hero) { scroll-margin-top: 110px; }
 }
 #about::before{
   content: '';
-  position: fixed; /* ← ВОТ ЭТО: фон зафиксирован относительно экрана */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
-  z-index: -1; /* ← фон позади контента */
+  z-index: -1;
   pointer-events: none;
 }
-/* УБИРАЕМ ::after С ЧЁРНЫМ ЦВЕТОМ — он больше не нужен */
 
-/* КОНТЕНТ ПОВЕРХ ВСЕГО */
 .about-inner {
   position: relative;
-  z-index: 2; /* контент поверх текстуры */
+  z-index: 2;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -376,21 +353,20 @@ section:not(#hero) { scroll-margin-top: 110px; }
   line-height: 1.8;
 }
 
-/* ─ FOOTER ── */
 footer {
   padding: 48px 40px 32px;
 }
 
 footer::before{
   content: '';
-  position: fixed; /* ← ВОТ ЭТО: фон зафиксирован относительно экрана */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
-  z-index: -1; /* ← фон позади контента */
+  z-index: -1;
   pointer-events: none;
 }
 
@@ -462,7 +438,6 @@ footer::before{
 
 .footer-nav a:hover { color: #fff; }
 
-/* ── ANIMATION ── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -479,7 +454,6 @@ footer::before{
   transform: translateY(0);
 }
 
-/* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   nav { padding: 16px 24px; }
   .nav-links { display: none; }
